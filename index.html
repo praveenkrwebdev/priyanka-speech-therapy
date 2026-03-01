@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Speech Therapy Clinic</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --primary:#2F6690;
+    --primary-light:#3A7CA5;
+    --accent:#E8F1F8;
+    --text-dark:#1C2B36;
+    --text-light:#5F6F7C;
+    --bg:#F8FBFD;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter', sans-serif;
+    background:var(--bg);
+    color:var(--text-dark);
+    line-height:1.6;
+}
+
+/* ---------- NAVBAR ---------- */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#ffffff;
+    box-shadow:0 2px 20px rgba(0,0,0,0.05);
+}
+
+.logo{
+    font-family:'Playfair Display', serif;
+    font-size:24px;
+    font-weight:600;
+    color:var(--primary);
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--text-dark);
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:100px 8%;
+    gap:50px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-family:'Playfair Display', serif;
+    font-size:48px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:18px;
+    color:var(--text-light);
+    margin-bottom:30px;
+    max-width:500px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:var(--primary);
+    color:white;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:var(--primary-light);
+    transform:translateY(-2px);
+}
+
+/* ---------- HERO IMAGE ---------- */
+
+.hero-image{
+    flex:1;
+    background:var(--accent);
+    border-radius:30px;
+    padding:40px;
+    box-shadow:0 20px 60px rgba(47,102,144,0.15);
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:20px;
+}
+
+/* ---------- SERVICES ---------- */
+
+.services{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.services h2{
+    font-family:'Playfair Display', serif;
+    font-size:36px;
+    margin-bottom:50px;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+}
+
+.service-card{
+    background:white;
+    padding:40px 30px;
+    border-radius:25px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.06);
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 50px rgba(0,0,0,0.1);
+}
+
+.service-card h3{
+    font-family:'Playfair Display', serif;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.service-card p{
+    color:var(--text-light);
+    font-size:15px;
+}
+
+/* ---------- CTA ---------- */
+
+.cta{
+    background:var(--primary);
+    color:white;
+    padding:80px 8%;
+    text-align:center;
+    border-radius:40px 40px 0 0;
+}
+
+.cta h2{
+    font-family:'Playfair Display', serif;
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.cta p{
+    margin-bottom:30px;
+}
+
+.cta .btn{
+    background:white;
+    color:var(--primary);
+}
+
+.cta .btn:hover{
+    background:#f0f0f0;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+    background:#ffffff;
+    padding:30px 8%;
+    text-align:center;
+    font-size:14px;
+    color:var(--text-light);
+}
+
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-text p{
+        margin:auto;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Confident Speech Clinic</div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Helping You Speak with Confidence & Clarity</h1>
+        <p>Professional speech and language therapy for children and adults in New Delhi. Personalized sessions designed to build confidence and communication skills.</p>
+        <a href="#" class="btn">Book Consultation</a>
+    </div>
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350" alt="Speech Therapy Session">
+    </div>
+</section>
+
+<section class="services">
+    <h2>Our Therapy Services</h2>
+    <div class="service-grid">
+        <div class="service-card">
+            <h3>Speech Delay Therapy</h3>
+            <p>Personalized programs designed to support children with delayed speech development.</p>
+        </div>
+        <div class="service-card">
+            <h3>Stammering Treatment</h3>
+            <p>Evidence-based techniques to help improve fluency and build confidence.</p>
+        </div>
+        <div class="service-card">
+            <h3>Language Development</h3>
+            <p>Structured therapy sessions to enhance communication and expressive language skills.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Start Your Journey to Confident Communication</h2>
+    <p>Schedule your first consultation today and take the first step toward better speech and clarity.</p>
+    <a href="#" class="btn">Get Started</a>
+</section>
+
+<footer>
+    © 2026 Confident Speech Clinic. All Rights Reserved.
+</footer>
+
+</body>
+</html>
